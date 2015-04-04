@@ -16,6 +16,7 @@
 		A10298371ACF899800BD83ED /* CephTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298361ACF899800BD83ED /* CephTests.m */; };
 		A10298451ACF940C00BD83ED /* SubjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298441ACF940C00BD83ED /* SubjectListViewController.m */; };
 		A10298481ACFB4B900BD83ED /* VocabListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298471ACFB4B900BD83ED /* VocabListViewController.m */; };
+		A102984B1AD065C600BD83ED /* BiologyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A102984A1AD065C600BD83ED /* BiologyListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		A10298441ACF940C00BD83ED /* SubjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubjectListViewController.m; path = ../SubjectListViewController.m; sourceTree = "<group>"; };
 		A10298461ACFB4B900BD83ED /* VocabListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListViewController.h; sourceTree = "<group>"; };
 		A10298471ACFB4B900BD83ED /* VocabListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListViewController.m; sourceTree = "<group>"; };
+		A10298491AD065C600BD83ED /* BiologyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiologyListViewController.h; sourceTree = "<group>"; };
+		A102984A1AD065C600BD83ED /* BiologyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiologyListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 			children = (
 				A10298431ACF940C00BD83ED /* SubjectListViewController.h */,
 				A10298441ACF940C00BD83ED /* SubjectListViewController.m */,
+				A10298491AD065C600BD83ED /* BiologyListViewController.h */,
+				A102984A1AD065C600BD83ED /* BiologyListViewController.m */,
 				A102981E1ACF899800BD83ED /* AppDelegate.h */,
 				A102981F1ACF899800BD83ED /* AppDelegate.m */,
 				A10298211ACF899800BD83ED /* MainViewController.h */,
@@ -233,6 +238,7 @@
 				A10298201ACF899800BD83ED /* AppDelegate.m in Sources */,
 				A102981D1ACF899800BD83ED /* main.m in Sources */,
 				A10298481ACFB4B900BD83ED /* VocabListViewController.m in Sources */,
+				A102984B1AD065C600BD83ED /* BiologyListViewController.m in Sources */,
 				A10298451ACF940C00BD83ED /* SubjectListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

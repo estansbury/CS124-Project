@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SubjectListViewController : UITableViewController
+<UITableViewDelegate, UITableViewDataSource>
 
 - (instancetype)initWithFrame:(CGRect)frame;
 
