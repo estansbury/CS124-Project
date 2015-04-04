@@ -1,5 +1,5 @@
 //
-//  SubjectListView.h
+//  VocabListViewController.h
 //  Ceph
 //
 //  Created by Emily Stansbury on 4/3/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SubjectListView : UITableViewController
+@interface VocabListViewController : UITableViewController
+
+- (instancetype)initWithFrame:(CGRect)frame;
 
 @end

@@ -14,7 +14,8 @@
 		A10298281ACF899800BD83ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10298271ACF899800BD83ED /* Images.xcassets */; };
 		A102982B1ACF899800BD83ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10298291ACF899800BD83ED /* LaunchScreen.xib */; };
 		A10298371ACF899800BD83ED /* CephTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298361ACF899800BD83ED /* CephTests.m */; };
-		A10298451ACF940C00BD83ED /* SubjectListView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298441ACF940C00BD83ED /* SubjectListView.m */; };
+		A10298451ACF940C00BD83ED /* SubjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298441ACF940C00BD83ED /* SubjectListViewController.m */; };
+		A10298481ACFB4B900BD83ED /* VocabListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298471ACFB4B900BD83ED /* VocabListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,8 +42,10 @@
 		A10298301ACF899800BD83ED /* CephTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CephTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10298351ACF899800BD83ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A10298361ACF899800BD83ED /* CephTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CephTests.m; sourceTree = "<group>"; };
-		A10298431ACF940C00BD83ED /* SubjectListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubjectListView.h; path = ../SubjectListView.h; sourceTree = "<group>"; };
-		A10298441ACF940C00BD83ED /* SubjectListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubjectListView.m; path = ../SubjectListView.m; sourceTree = "<group>"; };
+		A10298431ACF940C00BD83ED /* SubjectListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubjectListViewController.h; path = ../SubjectListViewController.h; sourceTree = "<group>"; };
+		A10298441ACF940C00BD83ED /* SubjectListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubjectListViewController.m; path = ../SubjectListViewController.m; sourceTree = "<group>"; };
+		A10298461ACFB4B900BD83ED /* VocabListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListViewController.h; sourceTree = "<group>"; };
+		A10298471ACFB4B900BD83ED /* VocabListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +87,14 @@
 		A10298191ACF899800BD83ED /* Ceph */ = {
 			isa = PBXGroup;
 			children = (
-				A10298431ACF940C00BD83ED /* SubjectListView.h */,
-				A10298441ACF940C00BD83ED /* SubjectListView.m */,
+				A10298431ACF940C00BD83ED /* SubjectListViewController.h */,
+				A10298441ACF940C00BD83ED /* SubjectListViewController.m */,
 				A102981E1ACF899800BD83ED /* AppDelegate.h */,
 				A102981F1ACF899800BD83ED /* AppDelegate.m */,
 				A10298211ACF899800BD83ED /* MainViewController.h */,
 				A10298221ACF899800BD83ED /* MainViewController.m */,
+				A10298461ACFB4B900BD83ED /* VocabListViewController.h */,
+				A10298471ACFB4B900BD83ED /* VocabListViewController.m */,
 				A10298241ACF899800BD83ED /* Main.storyboard */,
 				A10298271ACF899800BD83ED /* Images.xcassets */,
 				A10298291ACF899800BD83ED /* LaunchScreen.xib */,
@@ -227,7 +232,8 @@
 				A10298231ACF899800BD83ED /* MainViewController.m in Sources */,
 				A10298201ACF899800BD83ED /* AppDelegate.m in Sources */,
 				A102981D1ACF899800BD83ED /* main.m in Sources */,
-				A10298451ACF940C00BD83ED /* SubjectListView.m in Sources */,
+				A10298481ACFB4B900BD83ED /* VocabListViewController.m in Sources */,
+				A10298451ACF940C00BD83ED /* SubjectListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

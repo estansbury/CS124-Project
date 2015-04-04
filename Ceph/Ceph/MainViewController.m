@@ -7,6 +7,8 @@
 //
 
 #import "MainViewController.h"
+#import "SubjectListViewController.h"
+#import "VocabListViewController.h"
 
 @interface MainViewController () <UITextFieldDelegate>
 
@@ -118,10 +120,14 @@
 
 - (void)subjectButtonTapped:(id)sender {
     
+    SubjectListViewController *subVC = [[SubjectListViewController alloc] initWithFrame:self.view.frame];
+    [self.navigationController pushViewController:subVC animated:YES];
+    
 }
 
 - (void)listButtonTapped:(id)sender {
-    
+    VocabListViewController *vocabVC = [[VocabListViewController alloc] initWithFrame:self.view.frame];
+    [self.navigationController pushViewController:vocabVC animated:YES];
 }
 
 @end
