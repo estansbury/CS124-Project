@@ -74,9 +74,9 @@
 
 - (void)addSubjectButton {
     UIButton *subjectButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [subjectButton setFrame:CGRectMake(self.view.frame.size.width/2 - 150,
+    [subjectButton setFrame:CGRectMake(self.view.frame.size.width/2 - 100,
                                        self.view.frame.size.height/3 + 85,
-                                       300,
+                                       200,
                                        50)];
     [subjectButton addTarget:self
                       action:@selector(subjectButtonTapped:)
@@ -84,14 +84,18 @@
     [subjectButton setTitle:@"Subject"
                    forState:UIControlStateNormal];
     subjectButton.titleLabel.font = [UIFont systemFontOfSize:20];
+    subjectButton.layer.backgroundColor = [[UIColor colorWithRed:0.14
+                                                           green:0.66
+                                                            blue:0.20
+                                                           alpha:0.7] CGColor];
     [self.view addSubview:subjectButton];
 }
 
 - (void)addListButton {
     UIButton *listButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [listButton setFrame:CGRectMake(self.view.frame.size.width/2 - 150,
+    [listButton setFrame:CGRectMake(self.view.frame.size.width/2 - 100,
                                        self.view.frame.size.height/3 + 150,
-                                       300,
+                                       200,
                                        50)];
     [listButton addTarget:self
                       action:@selector(listButtonTapped:)
@@ -99,6 +103,11 @@
     [listButton setTitle:@"Vocab Lists"
                    forState:UIControlStateNormal];
     listButton.titleLabel.font = [UIFont systemFontOfSize:20];
+    
+    listButton.layer.backgroundColor = [[UIColor colorWithRed:0.14
+                                                           green:0.66
+                                                            blue:0.20
+                                                           alpha:0.7] CGColor];
     [self.view addSubview:listButton];
 }
 
