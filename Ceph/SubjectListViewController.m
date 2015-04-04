@@ -22,6 +22,13 @@
     {
         self.view = [[UITableView alloc] initWithFrame:frame];
         self.navigationItem.title = @"Subjects";
+        
+        UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
+                                         initWithTitle:@"search"
+                                         style:UIBarButtonItemStylePlain
+                                         target:self
+                                         action:@selector(searchPressed:)];
+        self.navigationItem.rightBarButtonItem = searchButton;
     }
     return self;
 }
@@ -32,6 +39,10 @@
 
 - (void)didReceiveMemoryWarning {
     //do nothing for now
+}
+
+- (IBAction)searchPressed:(id)sender {
+    
 }
 
 @end

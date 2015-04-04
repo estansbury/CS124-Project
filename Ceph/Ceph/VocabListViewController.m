@@ -22,6 +22,13 @@
     {
         self.view = [[UITableView alloc] initWithFrame:frame];
         self.navigationItem.title = @"Vocab";
+        
+        UIBarButtonItem *newListButton = [[UIBarButtonItem alloc]
+                                         initWithTitle:@"New"
+                                         style:UIBarButtonItemStylePlain
+                                         target:self
+                                         action:@selector(newListPressed:)];
+        self.navigationItem.rightBarButtonItem = newListButton;
     }
     return self;
 }
@@ -32,6 +39,10 @@
 
 - (void)didReceiveMemoryWarning {
     //do nothing for now
+}
+
+- (IBAction)newListPressed:(id)sender {
+    
 }
 
 @end
