@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>47724222-6C0C-4584-8277-1C0A2DFFA76F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ceph</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CFD27F59AF68C03FA5C917F6229DD3278CCD610D</key>
+		<string>https://github.com/estansbury/CS124-Project.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ceph/Ceph.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CFD27F59AF68C03FA5C917F6229DD3278CCD610D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/estansbury/CS124-Project.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CFD27F59AF68C03FA5C917F6229DD3278CCD610D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CFD27F59AF68C03FA5C917F6229DD3278CCD610D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CS124-Project</string>
+		</dict>
+	</array>
+</dict>
+</plist>
