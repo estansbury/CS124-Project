@@ -17,6 +17,7 @@
 		A10298451ACF940C00BD83ED /* SubjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298441ACF940C00BD83ED /* SubjectListViewController.m */; };
 		A10298481ACFB4B900BD83ED /* VocabListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298471ACFB4B900BD83ED /* VocabListViewController.m */; };
 		A102984B1AD065C600BD83ED /* BiologyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A102984A1AD065C600BD83ED /* BiologyListViewController.m */; };
+		A1E3A63C1AD1E35200033EAD /* VocabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E3A63B1AD1E35200033EAD /* VocabViewController.m */; };
 		FEAB22701AD11859009FBA90 /* CephalopodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAB226F1AD11859009FBA90 /* CephalopodViewController.m */; };
 		FEAB22731AD1D1B1009FBA90 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAB22721AD1D1B1009FBA90 /* WordListViewController.m */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,9 @@
 		A10298471ACFB4B900BD83ED /* VocabListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListViewController.m; sourceTree = "<group>"; };
 		A10298491AD065C600BD83ED /* BiologyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiologyListViewController.h; sourceTree = "<group>"; };
 		A102984A1AD065C600BD83ED /* BiologyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BiologyListViewController.m; sourceTree = "<group>"; };
+		A102984A1AD065C600BD83ED /* BiologyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiologyListViewController.m; sourceTree = "<group>"; };
+		A1E3A63A1AD1E35200033EAD /* VocabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabViewController.h; sourceTree = "<group>"; };
+		A1E3A63B1AD1E35200033EAD /* VocabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabViewController.m; sourceTree = "<group>"; };
 		FEAB226F1AD11859009FBA90 /* CephalopodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CephalopodViewController.m; sourceTree = "<group>"; };
 		FEAB22711AD11871009FBA90 /* CephalopodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CephalopodViewController.h; sourceTree = "<group>"; };
 		FEAB22721AD1D1B1009FBA90 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 				A10298221ACF899800BD83ED /* MainViewController.m */,
 				A10298461ACFB4B900BD83ED /* VocabListViewController.h */,
 				A10298471ACFB4B900BD83ED /* VocabListViewController.m */,
+				A1E3A63A1AD1E35200033EAD /* VocabViewController.h */,
+				A1E3A63B1AD1E35200033EAD /* VocabViewController.m */,
 				A10298241ACF899800BD83ED /* Main.storyboard */,
 				A10298271ACF899800BD83ED /* Images.xcassets */,
 				A10298291ACF899800BD83ED /* LaunchScreen.xib */,
@@ -247,6 +253,7 @@
 				A10298231ACF899800BD83ED /* MainViewController.m in Sources */,
 				A10298201ACF899800BD83ED /* AppDelegate.m in Sources */,
 				FEAB22731AD1D1B1009FBA90 /* WordListViewController.m in Sources */,
+				A1E3A63C1AD1E35200033EAD /* VocabViewController.m in Sources */,
 				A102981D1ACF899800BD83ED /* main.m in Sources */,
 				A10298481ACFB4B900BD83ED /* VocabListViewController.m in Sources */,
 				FEAB22701AD11859009FBA90 /* CephalopodViewController.m in Sources */,

@@ -29,7 +29,7 @@
                                          initWithTitle:@"search"
                                          style:UIBarButtonItemStylePlain
                                          target:self
-                                         action:@selector(searchPressed:)];
+                                         action:@selector(addWordPressed:)];
         self.navigationItem.rightBarButtonItem = searchButton;
         
         
@@ -43,6 +43,11 @@
     NSString *textString = [NSString stringWithFormat: @"*Roots:*  [ceph]: head  [pod]: foot \n \n Definition: an active predatory mollusk of the large class Cephalopoda, such as an octopus or squid.\n \n Words with similar roots: \n cephalization\n \n octopod\n \n podium \n \n tripod"];
     [_textView setText:textString];
     [self.view addSubview:_textView];
+}
+
+- (IBAction)addWordPressed:(id)sender
+{
+    //stub
 }
 
 

@@ -1,22 +1,22 @@
 //
-//  VocabListViewController.m
+//  VocabViewController.m
 //  Ceph
 //
-//  Created by Emily Stansbury on 4/3/15.
+//  Created by Emily Stansbury on 4/5/15.
 //  Copyright (c) 2015 Emily Stansbury. All rights reserved.
 //
 
-#import "VocabListViewController.h"
 #import "VocabViewController.h"
 
-@interface VocabListViewController ()
+@interface VocabViewController ()
+
 {
-    NSArray *_vocabLists;
+    NSArray *_words;
 }
 
 @end
 
-@implementation VocabListViewController
+@implementation VocabViewController
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -31,17 +31,16 @@
         self.view = [[UITableView alloc] initWithFrame:frame];
         ((UITableView *)self.view).delegate = self;
         ((UITableView *)self.view).dataSource = self;
+        self.navigationItem.title = @"Sea Life";
         
-        self.navigationItem.title = @"Vocab";
-        
-        UIBarButtonItem *newListButton = [[UIBarButtonItem alloc]
-                                         initWithTitle:@"New"
+        UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
+                                         initWithTitle:@"search"
                                          style:UIBarButtonItemStylePlain
                                          target:self
-                                         action:@selector(newListPressed:)];
-        self.navigationItem.rightBarButtonItem = newListButton;
+                                         action:@selector(searchPressed:)];
+        self.navigationItem.rightBarButtonItem = searchButton;
         
-        _vocabLists = @[@"Earth Science", @"Vertibrates", @"Sea Life", @"Cool Words"];
+        _words = @[@"Mollusca", @"Cnidaria", @"Nudibranch"];
     }
     return self;
 }
@@ -54,31 +53,25 @@
     //do nothing for now
 }
 
-- (IBAction)newListPressed:(id)sender {
+- (IBAction)searchPressed:(id)sender {
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_vocabLists count];
+    return [_words count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"VocabListCellReuseID";
+    static NSString *identifier = @"VocabCellReuseID";
     UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:identifier];
     }
-    cell.textLabel.text = [_vocabLists objectAtIndex:indexPath.row];
+    cell.textLabel.text = [_words objectAtIndex:indexPath.row];
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    VocabViewController *vocabVC = [[VocabViewController alloc] initWithFrame:self.view.frame];
-    [self.navigationController pushViewController:vocabVC animated:YES];
 }
 
 @end
