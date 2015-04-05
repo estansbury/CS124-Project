@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "SubjectListViewController.h"
 #import "VocabListViewController.h"
+#import "CephalopodViewController.h"
 
 @interface MainViewController () <UITextFieldDelegate>
 
@@ -66,6 +67,10 @@
     
     //It set when the left prefixLabel to be displayed
     searchBar.leftViewMode = UITextFieldViewModeAlways;
+    
+    [searchBar addTarget:self
+                   action:@selector(searchBarShouldReturn:)
+         forControlEvents:UIControlEventEditingDidEndOnExit];
     
     // Adds the textField to the view.
     [self.view addSubview:searchBar];
@@ -128,6 +133,15 @@
 - (void)listButtonTapped:(id)sender {
     VocabListViewController *vocabVC = [[VocabListViewController alloc] initWithFrame:self.view.frame];
     [self.navigationController pushViewController:vocabVC animated:YES];
+}
+
+//code from http://www.tutorialspoint.com/ios/ios_ui_elements_text_field.htm
+// This method enables or disables the processing of return key
+-(BOOL) searchBarShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    CephalopodViewController *cephVC = [[CephalopodViewController alloc] initWithFrame:self.view.frame];
+    [self.navigationController pushViewController:cephVC animated:YES];
+    return YES;
 }
 
 @end

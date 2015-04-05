@@ -1,22 +1,22 @@
 //
-//  BiologyListViewController.m
+//  WordListViewController.m
 //  Ceph
 //
-//  Created by Emily Stansbury on 4/4/15.
+//  Created by Rachel Wilson on 4/5/15.
 //  Copyright (c) 2015 Emily Stansbury. All rights reserved.
 //
 
-#import "BiologyListViewController.h"
 #import "WordListViewController.h"
+#import "CephalopodViewController.h"
 
-@interface BiologyListViewController ()
+@interface WordListViewController ()
 {
     NSArray *_categories;
 }
 
 @end
 
-@implementation BiologyListViewController
+@implementation WordListViewController
 
 - (instancetype)init
 {
@@ -43,7 +43,7 @@
                                          action:@selector(searchPressed:)];
         self.navigationItem.rightBarButtonItem = searchButton;
         
-        _categories = @[@"Anatomy", @"Biochemistry", @"Cell Biology", @"Ecology", @"Genetics", @"Mycology", @"Zoology"];
+        _categories = @[@"Abdomen", @"Amphibians", @"Bilateral Symmetry", @"Bipedal", @"Cephalopod", @"Coelenterates", @"Delphinidae"];
     }
     return self;
 }
@@ -60,7 +60,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"bioCellReuseID";
+    static NSString *identifier = @"wordCellReuseID";
     UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
@@ -73,8 +73,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //TODO: bring up Cephalopod info page
-    WordListViewController *wordVC = [[WordListViewController alloc] initWithFrame:self.view.frame];
-    [self.navigationController pushViewController:wordVC animated:YES];
+    CephalopodViewController *cephVC = [[CephalopodViewController alloc] initWithFrame:self.view.frame];
+    [self.navigationController pushViewController:cephVC animated:YES];
 }
 
 @end
