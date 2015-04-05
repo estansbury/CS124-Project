@@ -17,6 +17,7 @@
 		A10298451ACF940C00BD83ED /* SubjectListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298441ACF940C00BD83ED /* SubjectListViewController.m */; };
 		A10298481ACFB4B900BD83ED /* VocabListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298471ACFB4B900BD83ED /* VocabListViewController.m */; };
 		A102984B1AD065C600BD83ED /* BiologyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A102984A1AD065C600BD83ED /* BiologyListViewController.m */; };
+		FEAB22701AD11859009FBA90 /* CephalopodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAB226F1AD11859009FBA90 /* CephalopodViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		A10298471ACFB4B900BD83ED /* VocabListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListViewController.m; sourceTree = "<group>"; };
 		A10298491AD065C600BD83ED /* BiologyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiologyListViewController.h; sourceTree = "<group>"; };
 		A102984A1AD065C600BD83ED /* BiologyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiologyListViewController.m; sourceTree = "<group>"; };
+		FEAB226F1AD11859009FBA90 /* CephalopodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CephalopodViewController.m; sourceTree = "<group>"; };
+		FEAB22711AD11871009FBA90 /* CephalopodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CephalopodViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				A10298441ACF940C00BD83ED /* SubjectListViewController.m */,
 				A10298491AD065C600BD83ED /* BiologyListViewController.h */,
 				A102984A1AD065C600BD83ED /* BiologyListViewController.m */,
+				FEAB22711AD11871009FBA90 /* CephalopodViewController.h */,
+				FEAB226F1AD11859009FBA90 /* CephalopodViewController.m */,
 				A102981E1ACF899800BD83ED /* AppDelegate.h */,
 				A102981F1ACF899800BD83ED /* AppDelegate.m */,
 				A10298211ACF899800BD83ED /* MainViewController.h */,
@@ -238,6 +243,7 @@
 				A10298201ACF899800BD83ED /* AppDelegate.m in Sources */,
 				A102981D1ACF899800BD83ED /* main.m in Sources */,
 				A10298481ACFB4B900BD83ED /* VocabListViewController.m in Sources */,
+				FEAB22701AD11859009FBA90 /* CephalopodViewController.m in Sources */,
 				A102984B1AD065C600BD83ED /* BiologyListViewController.m in Sources */,
 				A10298451ACF940C00BD83ED /* SubjectListViewController.m in Sources */,
 			);
@@ -364,6 +370,7 @@
 				INFOPLIST_FILE = Ceph/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -374,6 +381,7 @@
 				INFOPLIST_FILE = Ceph/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -430,6 +438,7 @@
 				A102983C1ACF899800BD83ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A102983D1ACF899800BD83ED /* Build configuration list for PBXNativeTarget "CephTests" */ = {
 			isa = XCConfigurationList;
@@ -438,6 +447,7 @@
 				A102983F1ACF899800BD83ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

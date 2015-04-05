@@ -7,6 +7,7 @@
 //
 
 #import "BiologyListViewController.h"
+#import "CephalopodViewController.h"
 
 @interface BiologyListViewController ()
 {
@@ -72,6 +73,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //TODO: bring up Cephalopod info page
+    CephalopodViewController *cephVC = [[CephalopodViewController alloc] initWithFrame:self.view.frame];
+    [self.navigationController pushViewController:cephVC animated:YES];
 }
 
 @end
