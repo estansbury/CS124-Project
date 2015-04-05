@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol BiologyListViewControllerDelegate <NSObject>
+
+- (void)didSelectWord:(NSObject *)word;
+
+@end
+
 @interface BiologyListViewController : UITableViewController
 
 - (instancetype)initWithFrame:(CGRect)frame;
+
+- (void)setWordMode:(BOOL)addWordMode;
+
+@property id <BiologyListViewControllerDelegate>delegate;
 
 @end

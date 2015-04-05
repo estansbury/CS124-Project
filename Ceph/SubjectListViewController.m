@@ -10,8 +10,10 @@
 #import "BiologyListViewController.h"
 
 @interface SubjectListViewController ()
+<BiologyListViewControllerDelegate>
 {
     NSArray *_subjects;
+    BOOL _addWordMode;
 }
 
 @end
@@ -41,6 +43,8 @@
         self.navigationItem.rightBarButtonItem = searchButton;
         
         _subjects = @[@"Anthropology", @"Astronomy", @"Biology", @"Chemistry", @"Geology", @"Physics"];
+        
+        _addWordMode = NO;
     }
     return self;
 }
@@ -77,7 +81,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BiologyListViewController *bioVC = [[BiologyListViewController alloc] initWithFrame:self.view.frame];
+    [bioVC setWordMode:_addWordMode];
+    [bioVC setDelegate:self];
     [self.navigationController pushViewController:bioVC animated:YES];
 }
+
+- (void)setWordMode:(BOOL)addWordMode
+{
+    _addWordMode = addWordMode;
+}
+
+- (void)didSelectWord:(NSObject *)word
+{
+    [self.navigationController popViewControllerAnimated:NO];
+    [_delegate didSelectWord:nil];
+}
+
+
+
 
 @end

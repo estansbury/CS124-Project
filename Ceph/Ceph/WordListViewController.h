@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol WordListViewControllerDelegate <NSObject>
+
+- (void)didSelectWord:(NSObject *)word;
+
+@end
+
 @interface WordListViewController : UITableViewController
 
 - (instancetype)initWithFrame:(CGRect)frame;
+
+- (void)setWordMode:(BOOL)addWordMode;
+
+@property id <WordListViewControllerDelegate>delegate;
 
 @end

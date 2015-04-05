@@ -10,8 +10,10 @@
 #import "WordListViewController.h"
 
 @interface BiologyListViewController ()
+<WordListViewControllerDelegate>
 {
     NSArray *_categories;
+    BOOL _addWordMode;
 }
 
 @end
@@ -34,7 +36,7 @@
         self.view = [[UITableView alloc] initWithFrame:frame];
         ((UITableView *)self.view).delegate = self;
         ((UITableView *)self.view).dataSource = self;
-        self.navigationItem.title = @"Subjects";
+        self.navigationItem.title = @"Biology";
         
         UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
                                          initWithTitle:@"search"
@@ -44,6 +46,8 @@
         self.navigationItem.rightBarButtonItem = searchButton;
         
         _categories = @[@"Anatomy", @"Biochemistry", @"Cell Biology", @"Ecology", @"Genetics", @"Mycology", @"Zoology"];
+        
+        _addWordMode = NO;
     }
     return self;
 }
@@ -74,7 +78,20 @@
 {
     //TODO: bring up Cephalopod info page
     WordListViewController *wordVC = [[WordListViewController alloc] initWithFrame:self.view.frame];
+    [wordVC setWordMode:_addWordMode];
+    [wordVC setDelegate:self];
     [self.navigationController pushViewController:wordVC animated:YES];
+}
+
+- (void)setWordMode:(BOOL)addWordMode
+{
+    _addWordMode = addWordMode;
+}
+
+- (void)didSelectWord:(NSObject *)word
+{
+    [self.navigationController popViewControllerAnimated:NO];
+    [_delegate didSelectWord:word];
 }
 
 @end

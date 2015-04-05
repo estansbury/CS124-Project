@@ -7,11 +7,14 @@
 //
 
 #import "VocabViewController.h"
+#import "SubjectListViewController.h"
+#import "CephalopodViewController.h"
 
 @interface VocabViewController ()
+<SubjListViewControllerDelegate>
 
 {
-    NSArray *_words;
+    NSMutableArray *_words;
 }
 
 @end
@@ -34,13 +37,13 @@
         self.navigationItem.title = @"Sea Life";
         
         UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
-                                         initWithTitle:@"search"
+                                         initWithTitle:@"New"
                                          style:UIBarButtonItemStylePlain
                                          target:self
-                                         action:@selector(searchPressed:)];
+                                         action:@selector(newWordPressed:)];
         self.navigationItem.rightBarButtonItem = searchButton;
         
-        _words = @[@"Mollusca", @"Cnidaria", @"Nudibranch"];
+        _words = [@[@"Mollusca", @"Cnidaria", @"Nudibranch"] mutableCopy];
     }
     return self;
 }
@@ -53,8 +56,15 @@
     //do nothing for now
 }
 
-- (IBAction)searchPressed:(id)sender {
+- (IBAction)newWordPressed:(id)sender {
     
+    SubjectListViewController *subVC = [[SubjectListViewController alloc] initWithFrame:self.view.frame];
+    [subVC setWordMode:YES];
+    [subVC setDelegate:self];
+    [self.navigationController pushViewController:subVC animated:YES];
+    
+    [_words addObject:@"Cephalopod"];
+    [(UITableView*)self.view reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -72,6 +82,18 @@
     }
     cell.textLabel.text = [_words objectAtIndex:indexPath.row];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CephalopodViewController *cephVC = [[CephalopodViewController alloc] initWithFrame:self.view.frame];
+    [self.navigationController pushViewController:cephVC animated:YES];
+}
+
+- (void)didSelectWord:(NSObject *)word
+{
+    [self.navigationController popViewControllerAnimated:NO];
+    //do more things
 }
 
 @end

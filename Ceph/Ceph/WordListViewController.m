@@ -12,6 +12,7 @@
 @interface WordListViewController ()
 {
     NSArray *_categories;
+    BOOL _addWordMode;
 }
 
 @end
@@ -34,7 +35,7 @@
         self.view = [[UITableView alloc] initWithFrame:frame];
         ((UITableView *)self.view).delegate = self;
         ((UITableView *)self.view).dataSource = self;
-        self.navigationItem.title = @"Subjects";
+        self.navigationItem.title = @"Zoology";
         
         UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
                                          initWithTitle:@"search"
@@ -44,6 +45,7 @@
         self.navigationItem.rightBarButtonItem = searchButton;
         
         _categories = @[@"Abdomen", @"Amphibians", @"Bilateral Symmetry", @"Bipedal", @"Cephalopod", @"Coelenterates", @"Delphinidae"];
+        _addWordMode = NO;
     }
     return self;
 }
@@ -72,9 +74,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //TODO: bring up Cephalopod info page
-    CephalopodViewController *cephVC = [[CephalopodViewController alloc] initWithFrame:self.view.frame];
-    [self.navigationController pushViewController:cephVC animated:YES];
+    if (_addWordMode) {
+        [_delegate didSelectWord:nil];
+        
+    } else {
+        CephalopodViewController *cephVC = [[CephalopodViewController alloc] initWithFrame:self.view.frame];
+        [self.navigationController pushViewController:cephVC animated:YES];
+    }
+    
+}
+
+- (void)setWordMode:(BOOL)addWordMode
+{
+    _addWordMode = addWordMode;
 }
 
 @end

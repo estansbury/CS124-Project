@@ -26,7 +26,7 @@
         self.navigationItem.title = @"Cephalopod";
         
         UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
-                                         initWithTitle:@"search"
+                                         initWithTitle:@"add"
                                          style:UIBarButtonItemStylePlain
                                          target:self
                                          action:@selector(addWordPressed:)];
