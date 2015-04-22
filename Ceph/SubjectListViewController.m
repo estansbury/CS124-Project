@@ -8,6 +8,7 @@
 
 #import "SubjectListViewController.h"
 #import "BiologyListViewController.h"
+#import "CephalopodViewController.h"
 
 @interface SubjectListViewController ()
 <BiologyListViewControllerDelegate>
@@ -58,7 +59,21 @@
 }
 
 - (IBAction)searchPressed:(id)sender {
-    
+    UIAlertView *searchAlert = [[UIAlertView alloc] initWithTitle:@"Enter Word"
+                                                             message:nil
+                                                            delegate:self
+                                                   cancelButtonTitle:@"cancel"
+                                                   otherButtonTitles:@"search", nil];
+    searchAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [searchAlert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
+    if (buttonIndex == 1) {
+        CephalopodViewController *cephVC = [[CephalopodViewController alloc] initWithFrame:self.view.frame];
+        [self.navigationController pushViewController:cephVC animated:YES];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
