@@ -54,8 +54,25 @@
     //do nothing for now
 }
 
-- (IBAction)newListPressed:(id)sender {
-    
+- (IBAction)newListPressed:(id)sender
+{
+    UIAlertView *listTitleAlert = [[UIAlertView alloc] initWithTitle:@"New Vocabulary List Name:"
+                                                             message:nil
+                                                            delegate:self
+                                                   cancelButtonTitle:@"cancel"
+                                                   otherButtonTitles:@"new list", nil];
+    listTitleAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [listTitleAlert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
+    if (buttonIndex == 1) {
+        NSMutableArray *mutCopy = [_vocabLists mutableCopy];
+        [mutCopy addObject:[[alertView textFieldAtIndex:0] text]];
+        _vocabLists = mutCopy;
+        [(UITableView*)self.view reloadData];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
