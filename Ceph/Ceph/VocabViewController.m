@@ -43,7 +43,8 @@
                                          action:@selector(newWordPressed:)];
         self.navigationItem.rightBarButtonItem = searchButton;
         
-        _words = [@[@"Mollusca", @"Cnidaria", @"Nudibranch"] mutableCopy];
+        //_words = [@[@"Mollusca", @"Cnidaria", @"Nudibranch"] mutableCopy];
+        _words = [[NSMutableArray alloc] init];
     }
     return self;
 }

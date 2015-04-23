@@ -12,6 +12,7 @@
 @interface VocabListViewController ()
 {
     NSArray *_vocabLists;
+    VocabViewController *_vocabVC;
 }
 
 @end
@@ -41,7 +42,7 @@
                                          action:@selector(newListPressed:)];
         self.navigationItem.rightBarButtonItem = newListButton;
         
-        _vocabLists = @[@"Earth Science", @"Vertibrates", @"Sea Life", @"Cool Words"];
+        _vocabLists = @[@"Earth Science", @"Vertibrates", @"Cool Words"];
     }
     return self;
 }
@@ -94,8 +95,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    VocabViewController *vocabVC = [[VocabViewController alloc] initWithFrame:self.view.frame];
-    [self.navigationController pushViewController:vocabVC animated:YES];
+    if (_vocabVC == nil) {
+        _vocabVC = [[VocabViewController alloc] initWithFrame:self.view.frame];
+    }
+    [self.navigationController pushViewController:_vocabVC animated:YES];
 }
 
 @end

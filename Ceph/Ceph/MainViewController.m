@@ -12,6 +12,9 @@
 #import "CephalopodViewController.h"
 
 @interface MainViewController () <UITextFieldDelegate>
+{
+    VocabListViewController *_vocabListVC;
+}
 
 @end
 
@@ -88,7 +91,7 @@
     [subjectButton addTarget:self
                       action:@selector(subjectButtonTapped:)
             forControlEvents:UIControlEventTouchUpInside];
-    [subjectButton setTitle:@"Subject"
+    [subjectButton setTitle:@"Browse Subjects"
                    forState:UIControlStateNormal];
     subjectButton.titleLabel.font = [UIFont systemFontOfSize:20];
     subjectButton.layer.backgroundColor = [[UIColor colorWithRed:0.14
@@ -107,7 +110,7 @@
     [listButton addTarget:self
                       action:@selector(listButtonTapped:)
             forControlEvents:UIControlEventTouchUpInside];
-    [listButton setTitle:@"Vocab Lists"
+    [listButton setTitle:@"My Vocab Lists"
                    forState:UIControlStateNormal];
     listButton.titleLabel.font = [UIFont systemFontOfSize:20];
     
@@ -131,8 +134,10 @@
 }
 
 - (void)listButtonTapped:(id)sender {
-    VocabListViewController *vocabVC = [[VocabListViewController alloc] initWithFrame:self.view.frame];
-    [self.navigationController pushViewController:vocabVC animated:YES];
+    if (_vocabListVC == nil) {
+        _vocabListVC = [[VocabListViewController alloc] initWithFrame:self.view.frame];
+    }
+    [self.navigationController pushViewController:_vocabListVC animated:YES];
 }
 
 //code from http://www.tutorialspoint.com/ios/ios_ui_elements_text_field.htm
@@ -142,6 +147,11 @@
     CephalopodViewController *cephVC = [[CephalopodViewController alloc] initWithFrame:self.view.frame];
     [self.navigationController pushViewController:cephVC animated:YES];
     return YES;
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
 
 @end
