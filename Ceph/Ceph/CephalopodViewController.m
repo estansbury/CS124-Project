@@ -25,12 +25,12 @@
         //((UITextView *)self.view).dataSource = self;
         self.navigationItem.title = @"Cephalopod";
         
-        UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
-                                         initWithTitle:@"add"
-                                         style:UIBarButtonItemStylePlain
-                                         target:self
-                                         action:@selector(addWordPressed:)];
-        self.navigationItem.rightBarButtonItem = searchButton;
+//        UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
+//                                         initWithTitle:@"add"
+//                                         style:UIBarButtonItemStylePlain
+//                                         target:self
+//                                         action:@selector(addWordPressed:)];
+//        self.navigationItem.rightBarButtonItem = searchButton;
         
         
     }
