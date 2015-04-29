@@ -98,6 +98,7 @@
     if (_vocabVC == nil) {
         _vocabVC = [[VocabViewController alloc] initWithFrame:self.view.frame];
     }
+    [_vocabVC setTitle:[NSString stringWithFormat:@"%@",[tableView cellForRowAtIndexPath:indexPath].textLabel.text]];
     [self.navigationController pushViewController:_vocabVC animated:YES];
 }
 

@@ -11,7 +11,7 @@
 
 @interface WordListViewController ()
 {
-    NSArray *_categories;
+    NSArray *_vocabWords;
     BOOL _addWordMode;
 }
 
@@ -44,7 +44,7 @@
                                          action:@selector(searchPressed:)];
         self.navigationItem.rightBarButtonItem = searchButton;
         
-        _categories = @[@"Abdomen", @"Amphibians", @"Bilateral Symmetry", @"Bipedal", @"Cephalopod", @"Coelenterates", @"Delphinidae"];
+        _vocabWords = @[@"Abdomen", @"Amphibians", @"Bilateral Symmetry", @"Bipedal", @"Cephalopod", @"Coelenterates", @"Delphinidae"];
         _addWordMode = NO;
     }
     return self;
@@ -86,7 +86,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_categories count];
+    return [_vocabWords count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -97,7 +97,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:identifier];
     }
-    cell.textLabel.text = [_categories objectAtIndex:indexPath.row];
+    cell.textLabel.text = [_vocabWords objectAtIndex:indexPath.row];
     return cell;
 }
 

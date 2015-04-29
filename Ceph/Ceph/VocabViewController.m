@@ -34,10 +34,10 @@
         self.view = [[UITableView alloc] initWithFrame:frame];
         ((UITableView *)self.view).delegate = self;
         ((UITableView *)self.view).dataSource = self;
-        self.navigationItem.title = @"Sea Life";
+        //self.navigationItem.title = @"Sea Life"; // Hard
         
         UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
-                                         initWithTitle:@"New"
+                                         initWithTitle:@"Add"
                                          style:UIBarButtonItemStylePlain
                                          target:self
                                          action:@selector(newWordPressed:)];
@@ -47,6 +47,11 @@
         _words = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (void)setTitle:(NSString *)title
+{
+    self.navigationItem.title = title;
 }
 
 - (void)viewDidLoad {
@@ -64,7 +69,7 @@
     [subVC setDelegate:self];
     [self.navigationController pushViewController:subVC animated:YES];
     
-    [_words addObject:@"Cephalopod"];
+    //[_words addObject:@"Cephalopod"];
     [(UITableView*)self.view reloadData];
 }
 
@@ -95,6 +100,8 @@
 {
     [self.navigationController popViewControllerAnimated:NO];
     //do more things
+    [_words addObject:@"Cephalopod"];
+    [(UITableView*)self.view reloadData];
 }
 
 @end
