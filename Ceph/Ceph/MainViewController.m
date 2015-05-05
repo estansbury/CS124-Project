@@ -35,7 +35,7 @@
     [self addSearchBar];
     [self addSubjectButton];
     [self addListButton];
-    self.navigationItem.title = @"Ceph App";
+    self.navigationItem.title = @"Ceph Science Vocabulary App";
 }
 
 - (void)addSearchBar {
@@ -84,32 +84,45 @@
 
 - (void)addSubjectButton {
     UIButton *subjectButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIImage *subjectImage1 = [UIImage imageNamed:@"BrowseSubjectsButton.jpg"];
+    [subjectButton setBackgroundImage:subjectImage1 forState:UIControlStateNormal];
+    
+
     [subjectButton setFrame:CGRectMake(self.view.frame.size.width/2 - 100,
                                        self.view.frame.size.height/3 + 85,
                                        200,
-                                       50)];
-    [subjectButton addTarget:self
+                                       100)];
+
+     [subjectButton addTarget:self
                       action:@selector(subjectButtonTapped:)
             forControlEvents:UIControlEventTouchUpInside];
+    /*
     [subjectButton setTitle:@"Browse Subjects"
                    forState:UIControlStateNormal];
+    
     subjectButton.titleLabel.font = [UIFont systemFontOfSize:20];
     subjectButton.layer.backgroundColor = [[UIColor colorWithRed:0.14
                                                            green:0.66
                                                             blue:0.20
                                                            alpha:0.7] CGColor];
+    */
     [self.view addSubview:subjectButton];
 }
 
 - (void)addListButton {
     UIButton *listButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIImage *subjectImage1 = [UIImage imageNamed:@"VocabListsButton.jpg"];
+    [listButton setBackgroundImage:subjectImage1 forState:UIControlStateNormal];
+    
     [listButton setFrame:CGRectMake(self.view.frame.size.width/2 - 100,
-                                       self.view.frame.size.height/3 + 150,
+                                       self.view.frame.size.height/3 + 200,
                                        200,
-                                       50)];
+                                       100)];
     [listButton addTarget:self
                       action:@selector(listButtonTapped:)
             forControlEvents:UIControlEventTouchUpInside];
+    
+    /*
     [listButton setTitle:@"My Vocab Lists"
                    forState:UIControlStateNormal];
     listButton.titleLabel.font = [UIFont systemFontOfSize:20];
@@ -118,7 +131,8 @@
                                                            green:0.66
                                                             blue:0.20
                                                            alpha:0.7] CGColor];
-    [self.view addSubview:listButton];
+    */
+     [self.view addSubview:listButton];
 }
 
 - (void)didReceiveMemoryWarning {
