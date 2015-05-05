@@ -8,11 +8,13 @@
 
 #import "VocabListViewController.h"
 #import "VocabViewController.h"
+#import "DataModel.h"
 
 @interface VocabListViewController ()
 {
-    NSArray *_vocabLists;
+    NSDictionary *_vocabLists;
     VocabViewController *_vocabVC;
+    DataModel *_dataModel;
 }
 
 @end
@@ -42,7 +44,9 @@
                                          action:@selector(newListPressed:)];
         self.navigationItem.rightBarButtonItem = newListButton;
         
-        _vocabLists = @[@"Earth Science", @"Vertibrates", @"Cool Words"];
+        _dataModel = [[DataModel alloc] init];
+        
+        _vocabLists = [_dataModel getVocabLists];
     }
     return self;
 }
@@ -69,9 +73,10 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
     if (buttonIndex == 1) {
-        NSMutableArray *mutCopy = [_vocabLists mutableCopy];
-        [mutCopy addObject:[[alertView textFieldAtIndex:0] text]];
-        _vocabLists = mutCopy;
+        NSString *newList = [[alertView textFieldAtIndex:0] text];
+        [_dataModel addNewVocabList:newList];
+        _vocabLists = [_dataModel getVocabLists];
+        
         [(UITableView*)self.view reloadData];
     }
 }
@@ -89,7 +94,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:identifier];
     }
-    cell.textLabel.text = [_vocabLists objectAtIndex:indexPath.row];
+    cell.textLabel.text = [_vocabLists.allKeys objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -98,7 +103,8 @@
     if (_vocabVC == nil) {
         _vocabVC = [[VocabViewController alloc] initWithFrame:self.view.frame];
     }
-    [_vocabVC setTitle:[NSString stringWithFormat:@"%@",[tableView cellForRowAtIndexPath:indexPath].textLabel.text]];
+    NSString *selectedList = [NSString stringWithFormat:@"%@",[tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+    [_vocabVC setTitle:selectedList andWords:[_vocabLists objectForKey:selectedList]];
     [self.navigationController pushViewController:_vocabVC animated:YES];
 }
 

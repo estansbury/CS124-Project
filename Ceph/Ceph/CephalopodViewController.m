@@ -7,9 +7,11 @@
 //
 
 #import "CephalopodViewController.h"
+#import "DataModel.h"
 @interface CephalopodViewController ()
 {
     UITextView *_textView;
+    DataModel *_dataModel;
 };
 
 @end
@@ -25,14 +27,14 @@
         //((UITextView *)self.view).dataSource = self;
         self.navigationItem.title = @"Cephalopod";
         
-//        UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
-//                                         initWithTitle:@"add"
-//                                         style:UIBarButtonItemStylePlain
-//                                         target:self
-//                                         action:@selector(addWordPressed:)];
-//        self.navigationItem.rightBarButtonItem = searchButton;
+        UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
+                                         initWithTitle:@"add"
+                                         style:UIBarButtonItemStylePlain
+                                         target:self
+                                         action:@selector(addWordPressed:)];
+        self.navigationItem.rightBarButtonItem = searchButton;
         
-        
+        _dataModel = [[DataModel alloc] init];
     }
     return self;
 }
@@ -47,7 +49,7 @@
 
 - (IBAction)addWordPressed:(id)sender
 {
-    //stub
+    [_dataModel addWord:@"Cephalopod" toList:@"Cool Words"];
 }
 
 

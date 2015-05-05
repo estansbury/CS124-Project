@@ -9,12 +9,15 @@
 #import "VocabViewController.h"
 #import "SubjectListViewController.h"
 #import "CephalopodViewController.h"
+#import "DataModel.h"
 
 @interface VocabViewController ()
 <SubjListViewControllerDelegate>
 
 {
     NSMutableArray *_words;
+    NSString *_title;
+    DataModel *_dataModel;
 }
 
 @end
@@ -45,13 +48,16 @@
         
         //_words = [@[@"Mollusca", @"Cnidaria", @"Nudibranch"] mutableCopy];
         _words = [[NSMutableArray alloc] init];
+        _dataModel = [[DataModel alloc] init];
     }
     return self;
 }
 
-- (void)setTitle:(NSString *)title
+- (void)setTitle:(NSString *)title andWords:(NSMutableArray*)words
 {
-    self.navigationItem.title = title;
+    _title = title;
+    self.navigationItem.title = _title;
+    _words = words;
 }
 
 - (void)viewDidLoad {
@@ -100,7 +106,11 @@
 {
     [self.navigationController popViewControllerAnimated:NO];
     //do more things
-    [_words addObject:@"Cephalopod"];
+    //NSString *stringWord = [NSString stringWithFormat:@"%@", word];
+    NSString *stringWord = (NSString*) word;
+    [_dataModel addWord:(NSString*)stringWord toList:_title];
+    
+    //[_words addObject:stringWord];
     [(UITableView*)self.view reloadData];
 }
 

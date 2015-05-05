@@ -11,6 +11,6 @@
 @interface VocabViewController : UITableViewController
 
 - (instancetype)initWithFrame:(CGRect)frame;
-- (void)setTitle:(NSString *)title;
+- (void)setTitle:(NSString *)title andWords:(NSMutableArray*)words;
 
 @end

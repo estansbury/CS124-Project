@@ -124,7 +124,7 @@
 - (void)didSelectWord:(NSObject *)word
 {
     [self.navigationController popViewControllerAnimated:NO];
-    [_delegate didSelectWord:nil];
+    [_delegate didSelectWord:word];
 }
 
 

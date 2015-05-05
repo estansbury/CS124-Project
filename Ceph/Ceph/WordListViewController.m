@@ -104,7 +104,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (_addWordMode) {
-        [_delegate didSelectWord:nil];
+        [_delegate didSelectWord:[_vocabWords objectAtIndex:indexPath.row]];
         
     } else {
         CephalopodViewController *cephVC = [[CephalopodViewController alloc] initWithFrame:self.view.frame];

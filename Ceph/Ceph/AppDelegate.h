@@ -11,6 +11,8 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) NSMutableDictionary *vocabLists;
+@property (nonatomic, strong) NSDictionary *browseTree;
 
 
 @end
