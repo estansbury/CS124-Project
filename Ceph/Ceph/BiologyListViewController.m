@@ -40,7 +40,7 @@
         self.navigationItem.title = @"Biology";
         
         UIBarButtonItem *searchButton = [[UIBarButtonItem alloc]
-                                         initWithTitle:@"search"
+                                         initWithTitle:@"Search"
                                          style:UIBarButtonItemStylePlain
                                          target:self
                                          action:@selector(searchPressed:)];

@@ -18,6 +18,8 @@
 		A10298481ACFB4B900BD83ED /* VocabListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10298471ACFB4B900BD83ED /* VocabListViewController.m */; };
 		A102984B1AD065C600BD83ED /* BiologyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A102984A1AD065C600BD83ED /* BiologyListViewController.m */; };
 		A1E3A63C1AD1E35200033EAD /* VocabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1E3A63B1AD1E35200033EAD /* VocabViewController.m */; };
+		DABDACDB1AF87C1500951861 /* VocabListsButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DABDACDA1AF87C1500951861 /* VocabListsButton.jpg */; };
+		DABDACDD1AF87C2400951861 /* BrowseSubjectsButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DABDACDC1AF87C2400951861 /* BrowseSubjectsButton.jpg */; };
 		FEAB22701AD11859009FBA90 /* CephalopodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAB226F1AD11859009FBA90 /* CephalopodViewController.m */; };
 		FEAB22731AD1D1B1009FBA90 /* WordListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEAB22721AD1D1B1009FBA90 /* WordListViewController.m */; };
 /* End PBXBuildFile section */
@@ -51,10 +53,11 @@
 		A10298461ACFB4B900BD83ED /* VocabListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabListViewController.h; sourceTree = "<group>"; };
 		A10298471ACFB4B900BD83ED /* VocabListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabListViewController.m; sourceTree = "<group>"; };
 		A10298491AD065C600BD83ED /* BiologyListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiologyListViewController.h; sourceTree = "<group>"; };
-		A102984A1AD065C600BD83ED /* BiologyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BiologyListViewController.m; sourceTree = "<group>"; };
 		A102984A1AD065C600BD83ED /* BiologyListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BiologyListViewController.m; sourceTree = "<group>"; };
 		A1E3A63A1AD1E35200033EAD /* VocabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabViewController.h; sourceTree = "<group>"; };
 		A1E3A63B1AD1E35200033EAD /* VocabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabViewController.m; sourceTree = "<group>"; };
+		DABDACDA1AF87C1500951861 /* VocabListsButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = VocabListsButton.jpg; sourceTree = "<group>"; };
+		DABDACDC1AF87C2400951861 /* BrowseSubjectsButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BrowseSubjectsButton.jpg; sourceTree = "<group>"; };
 		FEAB226F1AD11859009FBA90 /* CephalopodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CephalopodViewController.m; sourceTree = "<group>"; };
 		FEAB22711AD11871009FBA90 /* CephalopodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CephalopodViewController.h; sourceTree = "<group>"; };
 		FEAB22721AD1D1B1009FBA90 /* WordListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordListViewController.m; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 		A10298191ACF899800BD83ED /* Ceph */ = {
 			isa = PBXGroup;
 			children = (
+				DABDACDC1AF87C2400951861 /* BrowseSubjectsButton.jpg */,
+				DABDACDA1AF87C1500951861 /* VocabListsButton.jpg */,
 				A10298431ACF940C00BD83ED /* SubjectListViewController.h */,
 				A10298441ACF940C00BD83ED /* SubjectListViewController.m */,
 				A10298491AD065C600BD83ED /* BiologyListViewController.h */,
@@ -231,6 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A10298261ACF899800BD83ED /* Main.storyboard in Resources */,
+				DABDACDD1AF87C2400951861 /* BrowseSubjectsButton.jpg in Resources */,
+				DABDACDB1AF87C1500951861 /* VocabListsButton.jpg in Resources */,
 				A102982B1ACF899800BD83ED /* LaunchScreen.xib in Resources */,
 				A10298281ACF899800BD83ED /* Images.xcassets in Resources */,
 			);

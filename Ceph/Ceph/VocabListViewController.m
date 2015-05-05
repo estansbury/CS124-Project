@@ -64,8 +64,8 @@
     UIAlertView *listTitleAlert = [[UIAlertView alloc] initWithTitle:@"New Vocabulary List Name:"
                                                              message:nil
                                                             delegate:self
-                                                   cancelButtonTitle:@"cancel"
-                                                   otherButtonTitles:@"new list", nil];
+                                                   cancelButtonTitle:@"Cancel"
+                                                   otherButtonTitles:@"New List", nil];
     listTitleAlert.alertViewStyle = UIAlertViewStylePlainTextInput;
     [listTitleAlert show];
 }
