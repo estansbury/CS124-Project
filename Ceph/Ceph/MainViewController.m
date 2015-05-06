@@ -163,6 +163,12 @@
     return YES;
 }
 
+-(void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    UITabBar *rootWordTabBar = [[UITabBar alloc] init];
+    NSLog(@"testing");
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view endEditing:YES];
