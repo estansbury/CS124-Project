@@ -49,8 +49,30 @@
 
 - (IBAction)addWordPressed:(id)sender
 {
-    [_dataModel addWord:@"Cephalopod" toList:@"Cool Words"];
+    UIActionSheet *listSelect = [[UIActionSheet alloc]initWithTitle:@"Add to list:"
+        delegate:self
+        cancelButtonTitle:@"Cancel"
+        destructiveButtonTitle:nil
+        otherButtonTitles:nil];
+    
+    
+    
+    NSArray *lists = [_dataModel getVocabListsAsArray];
+    for (NSString *list in lists) {
+        [listSelect addButtonWithTitle:list];
+    }
+    
+    [listSelect showFromBarButtonItem:self.navigationItem.rightBarButtonItem animated:YES];
 }
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *list = [actionSheet buttonTitleAtIndex:buttonIndex];
+    [_dataModel addWord:@"Cephalopod" toList:list];
+}
+
+
+
 
 
 

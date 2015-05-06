@@ -93,6 +93,11 @@
     return _browseTree;
 }
 
+- (NSArray*)getVocabListsAsArray
+{
+    return _vocabLists.allKeys;
+}
+
 - (BOOL)wordIsDefined:(NSString*)word
 {
     return [_allWords containsObject:word];

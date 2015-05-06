@@ -110,8 +110,22 @@
     NSString *stringWord = (NSString*) word;
     [_dataModel addWord:(NSString*)stringWord toList:_title];
     
+    [self showConfirmationAlertForWord:stringWord];
+    
     //[_words addObject:stringWord];
     [(UITableView*)self.view reloadData];
+}
+
+- (void)showConfirmationAlertForWord:(NSString *)word
+{
+    NSString *alertString = [NSString stringWithFormat:@"Successfully added %@ to %@", word, _title];
+    UIAlertView *listTitleAlert = [[UIAlertView alloc] initWithTitle:alertString
+                                                             message:nil
+                                                            delegate:self
+                                                   cancelButtonTitle:@"OK"
+                                                   otherButtonTitles: nil];
+    listTitleAlert.alertViewStyle = UIAlertViewStyleDefault;
+    [listTitleAlert show];
 }
 
 @end

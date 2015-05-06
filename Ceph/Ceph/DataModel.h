@@ -13,6 +13,8 @@
 - (NSDictionary*)getVocabLists;
 - (NSDictionary*)getBrowseTree;
 
+- (NSArray*)getVocabListsAsArray;
+
 - (BOOL)wordIsDefined:(NSString*)word;
 
 - (void)addNewVocabList:(NSString*)listName;

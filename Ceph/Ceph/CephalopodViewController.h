@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CephalopodViewController : UIViewController
+@interface CephalopodViewController : UIViewController <UIActionSheetDelegate>
 
 - (instancetype)initWithFrame:(CGRect)frame;
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
 
 @end
